@@ -7,6 +7,29 @@ let popup = function() {
 /*
 Проверять наличие элементов с атрибутом "data-popup"
 */
+  let create = function() {
+
+  };
+
+  let remove = function() {
+
+  };
+
+  let show = function() {
+
+  };
+
+  let action = function() {
+
+  };
+ 
+  let elems = document.querySelectorAll('[data-popup]');
+  if (!elems || elems.length == 0) return;
+
+  elems.forEach(function(elem) {
+    elem.addEventListener('click', action)
+  });
+  
 }
 
 window.addEventListener('load', function() {
