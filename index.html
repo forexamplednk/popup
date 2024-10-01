@@ -7,14 +7,34 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+  
+
   <h1>Lorem ipsum dolor sit amet.</h1>
   <a data-popup href="https://placehold.co/800x600"><img src="https://placehold.co/100x80" alt="#"></a>
   <a data-popup href="https://placehold.co/640x400"><img src="https://placehold.co/300x300" alt="#"></a>
   <a href="https://placehold.co/1024x768"><img src="https://placehold.co/200x100" alt="#"></a>
-  <p>Lorem ipsum <a data-popup href="https://ya.ru" target="_blank">dolor sit</a> dolor sit amet consectetur adipisicing elit. At dolor ad quo aspernatur iste asperiores?</p>
-  <button data-popup>Feedback form</button>
+  <p>Lorem ipsum <a data-popup data-popup-id="content1" href="https://ya.ru" target="_blank">dolor sit</a> dolor sit amet consectetur adipisicing elit. At dolor ad quo aspernatur iste asperiores?</p>
+  <button data-popup data-popup-id="feedbackForm">Feedback form</button>
   <button data-popup>My video</button>
   <p>Ex, voluptatem cumque eligendi provident nam fugit architecto quidem deleniti hic et aut eius explicabo.</p>
+  
+  
+  <div style="display: none; opacity: 0; visibility: hidden" id="content1">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, ipsam!</p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+  </div>
+  <div style="display: none; opacity: 0; visibility: hidden" id="feedbackForm">
+    <form action="">
+      <input name="name" type="text" placeholder="Name">
+      <input name="email" type="text" placeholder="Email">
+      <textarea name="message" placeholder="Message"></textarea>
+      <button>Send</button>
+    </form>
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>
