@@ -42,7 +42,13 @@ let popup = function() {
 
   let show = function(content = null) {
     remove();
-    create();
+    let elems = create();
+
+    if (content) {
+      let contentElem = elems[1].querySelector('.popup__content');
+      contentElem.innerHTML = content;
+    }
+    document.body.append(elems[0], elems[1]);
   };
 
   let action = function(e) {
