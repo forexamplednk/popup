@@ -37,7 +37,16 @@ let popup = function() {
   };
 
   let remove = function() {
+    let elemsPopupBackground = document.querySelectorAll('.popup__background');
+    let elemsPopup = document.querySelectorAll('.popup');
 
+    elemsPopupBackground.forEach(function(elemPopupBackground) {
+      elemPopupBackground.remove();
+    });
+
+    elemsPopup.forEach(function(elemPopup) {
+      elemPopup.remove();
+    });
   };
 
   let show = function(content = null) {
